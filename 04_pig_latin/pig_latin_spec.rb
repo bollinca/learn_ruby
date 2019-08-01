@@ -69,4 +69,14 @@ describe "#translate" do
   # * write a test asserting that capitalized words are still capitalized (but with a different initial capital letter, of course)
   # * retain the punctuation from the original phrase
 
+  it "maintains first letter capitalization" do
+    s = translate("Teacher")
+    expect(s).to eq("Eachertay")
+  end
+
+  it "maintains original punctuation" do
+    s = translate("Here it is.")
+    expect(s).to eq("Erehay itay isay.")
+  end
+
 end
